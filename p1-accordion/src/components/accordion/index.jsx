@@ -24,8 +24,7 @@ function Accordion(){
 
         setMultipleAccordion(newState);
     }
-
-    console.log(selected, multipleAccordion);
+    
     return (
         <div className="wrapper">
             <button onClick={ () => setIsMultiselectOn(!isMultiselectOn) }>Enable Multi Selection</button>
