@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "./data";
+import './styles.css';
 
 function Accordion(){
     const [selected, setSelected] = useState(undefined);
@@ -10,6 +11,7 @@ function Accordion(){
     }
     return (
         <div className="wrapper">
+            <button>Enable Multi Selection</button>
             <div className="accordion">
                 {
                     data && data.length > 0
@@ -21,11 +23,13 @@ function Accordion(){
                                 <h3>{ dataItem.question }</h3>
                                 <span>+</span>
                             </div>
-                            {
-                                selected === dataItem.id
-                                ? <div className="content">{ dataItem.answer }</div>
-                                : null
-                            }
+                            <div className="answer">
+                                {
+                                    selected === dataItem.id
+                                    ? <div className="content">{ dataItem.answer }</div>
+                                    : null
+                                }
+                            </div>
                         </div>
                     ) )
                     : <div>No data was returned!</div>

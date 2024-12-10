@@ -1,0 +1,57 @@
+/*
+    Adjusted from: https://codepen.io/mayank26/pen/dyvweme
+*/
+
+.wrapper {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Syne Mono";
+	flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper button {
+    background-color: #1E1E1E;
+    color: #f4de64;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.accordion {
+	max-width: 500px;
+	width: calc(100% - 20px);
+}
+
+.item {
+	background-color: #1E1E1E;
+	margin-bottom: 10px;
+	filter: drop-shadow(5px 5px 0px #0A0A0A);
+}
+
+.item:hover {
+	filter: drop-shadow(5px 5px 4px #0A0A0A);
+}
+
+.item > .title {
+	color: #f4de64;
+	padding: 5px 10px;
+	font-size: 1.3em;
+	cursor: pointer;
+}
+
+.item > .answer {
+    padding: 5px 10px 10px 20px;
+	color: #ddd;
+	font-size: 1.1em;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
